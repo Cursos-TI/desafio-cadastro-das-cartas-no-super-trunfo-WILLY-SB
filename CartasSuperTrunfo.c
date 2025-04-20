@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+trabalho xadrez.c
 // Definição da estrutura Carta
 typedef struct {
     char estado;                               // Letra de A a H
@@ -22,7 +22,7 @@ void lerCarta(Carta  *carta) {
     printf("Informe o nome da cidade: ");
     scanf("%49s", carta->nomeCidade); // Read up to 49 characters to avoid overflow
 
-   
+
     printf("Informe a população da cidade: ");
     scanf("%d", &carta->populacao);
 
