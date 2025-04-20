@@ -1,48 +1,46 @@
 #include <stdio.h>
-trabalho xadrez.c
-// Definição da estrutura Carta
-typedef struct {
-    char estado;                               // Letra de A a H
-    char codigoCarta[10];           // Código da carta (ex: A01, B03)
-    char nomeCidade[50];        // Nome da cidade (max 50 characters)
-    int populacao;                  // Número de habitantes
-    float area;                     // Área em km²
-    float pib;                      // Produto Interno Bruto
-} Carta;
+int main(){
+  int numeroCarta; // Número da carta (1 ou 2);
+      char estado; //Estado representado por uma letra (A ou B);
+    char codigoCarta[10]; // Código da carta (e.g., A01, B02);
+    char nomeCidade[50];   // Nome da cidade (Aracaju, Brasilia);
+    float populacao; //Número de habitantes (240.000);
+    float area; // Área em km² (1000.00);
+    float pib; // Pela população ;
 
-
-void lerCarta(Carta  *carta) {
-
+     printf("Informe o número da carta (1 ou 2);");
+     escanf("%d", &numeroCarta);
+    if (numeroCarta != 1 && numeroCarta != 2) {
+        printf("Número da carta inválido. Deve ser 1 ou 2.\n");
+        return 1; // Encerra o programa se o número da carta for inválido
+   
     printf("Informe o estado (letra de A a B): ");
-    scanf(" %c", &carta->estado);
+    scanf(" %c", &estado,"A" );
 
-    printf("Informe o código da carta (ex: A01): ");
-    scanf("%s", carta->codigoCarta);
+    printf("Informe o código da carta ( A01): ");
+    scanf("%s", &codigoCarta,"A01");
 
     printf("Informe o nome da cidade: ");
-    scanf("%49s", carta->nomeCidade); // Read up to 49 characters to avoid overflow
-
+    scanf("%49s",&nomeCidade,"Aracaju"); // Read up to 49 characters to avoid overflow
 
     printf("Informe a população da cidade: ");
-    scanf("%d", &carta->populacao);
+    scanf("%d", &populacao,"240.000");
 
     printf("Informe a área da cidade (km²): ");
-    scanf("%f", &carta->area);
+    scanf("%f", &area,"1000.00");
 
-    printf("Informe o PIB da cidade: ");
-    scanf("%f", &carta->pib);
-}
+    printf("Informe o PIB da cidade (em bilhões): ");
+    scanf("%f", &pib,'%f"');
 
-// Função para exibir os dados de uma carta
-void exibirCarta(Carta carta) {
-    printf("\n--- Dados da Carta ---\n");
-    printf("Estado: %c\n", carta.estado);
-    printf("Código: %s\n", carta.codigoCarta);
-    printf("Cidade: %s\n", carta.nomeCidade);
-    printf("População: %d\n", carta.populacao);
-    printf("Área: %.2f km²\n", carta.area);
-    printf("PIB: R$ %.2f bilhões\n", carta.pib);
-
+       printf("Numero da carta: %d\n", numeroCarta,"1");
+    printf("Estado: %c\n", estado,"A");
+printf("codigo da carta: %s\n", codigoCarta,"A01");
+ printf("Nome da cidade: %s\n", nomeCidade,"Aracaju");
+    printf("população: %d\n", "população","&populaçao","2400.000");
+    printf("Área: %.2f RM²\n", area,"1000.00");
+    printf("PIB: %.2f bilhoes\n", pib,"1000.00");
+    printf("Dados da carta:\n");
+  
 
    return 0;
     
