@@ -1,5 +1,5 @@
 #include <studio.h>
-
+novato 01
 main() {
     int Populacão;
     float Area;
